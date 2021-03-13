@@ -1,0 +1,72 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double compute(double a, double b, double z, double x)
+{
+	if (x <= 5 * a) return 2,5 * pow (b,2) + a * x - 4,5 * cos(x) * z;
+    if (x > b) return pow(pow (a , 2) - 5,4 * x), 3; + log(x*z);
+    if ((5 * a < x) && (x<=b)) return 6,5 * pow (b , 2)+(a - pow (x , 3)*z);
+    cout << "error" << endl;
+}
+
+int main()
+{
+	int variant;
+	double a, b, z, x, y;
+    float e;
+    e=2,71828;
+		
+	while (true)
+	{
+		cout << "Variant 1: for" << endl;
+		cout << "Variant 2: while" << endl;
+		cout << "Variant 3: do while" << endl;
+		cout << "Select variant: ";
+		variant=3;
+		
+		switch (variant) 
+		{
+			case 1:
+				a = -0,7;
+				b = -1.1;
+				z = pow(e,a);
+				
+				for (x = -5; x < 5; x = x + 0.1) 
+				{
+	    			y = compute(a, b, z, x);
+	    			cout << "x=" << x << ", y=" << y << endl;
+				}
+				break;
+			
+			case 2:
+				a = -2.1;
+				b = 11.1;
+				z = pow(e,b);
+				
+				x = -5.1;
+				while (x < 4.9) 
+				{
+				    x = x + 0.1;
+	    			y = compute(a, b, z, x);
+					cout << "x=" << x << ", y=" << y << endl;
+				}
+				break;
+				
+			case 3:
+				a = 2.2;
+				b = 23.75;
+				z = pow(pow(e,a),b);
+				
+				x = -5.1;
+				do 
+				{
+				    x = x + 0.1;
+	    			y = compute(a, b, z, x);
+	    			cout << "x=" << x << ", y=" << y << endl;
+				}
+				while (x < 4.9);
+				break;
+		}
+	}
+}
